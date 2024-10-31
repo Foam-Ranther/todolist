@@ -1,0 +1,6 @@
+.task_finished{
+    text-decoration:underline;
+    text-decoration-line: line-through;
+    
+    opacity: 0.5;
+}

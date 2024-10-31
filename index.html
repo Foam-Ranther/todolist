@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist-Tailwind</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body class="flex flex-col items-center gap-16 bg-slate-900 text-gray-500">
+    <div id=" input_section" class="max-w-80 w-full sm:max-w-2xl sm:w-full ">
+        <h1 class="text-center text-3xl sm:text-4xl mt-8 font-bold text-gray-500">To do list </h1>
+        <form id="input_form" class="flex mt-8 w-full gap-4  ">
+            
+            <input id ="input_val" class=" bg-gray-600 text-white w-full sm:py-1 sm:px-2 border-none outline-none rounded-md pl-1 font-semibold " type="text" placeholder="Enter your task" >
+
+            <input id="add_task" type="submit" class="border rounded-md p-1 font-bold  cursor-pointer hover:ring-2 hover:ring-blue-950 hover:bg-gray-700 hover:text-white " value="Add task">
+        </form>
+    </div>
+    <div id='task_section' class="task_section w-full flex justify-center flex-col items-center gap-4 m-4 py-2">
+        <div id="task " class="flex p-2 bg-gray-600 rounded-2xl gap-2 max-w-80 w-full sm:max-w-2xl sm:w-full ">
+            <form class="flex w-full gap-4" >
+                <input type="radio">
+                <input class=" w-full border-none outline-none text-white font-semibold bg-gray-600 task_finished" value="this is a test" placeholder="Enter value " type="text">
+
+            </form>
+            <button id="edit" class="font-bold border p-1 rounded-md cursor-pointer hover:ring-2 hover:ring-blue-950 hover:bg-gray-700 hover:text-white  bg-slate-900 task_finished">Edit</button>
+            <button id="Delete" class="font-bold border p-1 rounded-md cursor-pointer hover:ring-2 hover:ring-blue-950 hover:bg-gray-700 hover:text-white  bg-slate-900  ">Delete</button>
+        </div>
+    </div>
+</body>
+</html>
