@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded',()=>{
                 task_val.classList.toggle('task_finished')
                 edit_btn.classList.toggle('task_finished')
                 task_check.setAttribute('checked','')
-                edit_btn.disabled=true;
+                edit_btn.disabled=false;
                 set_local_storage(tasks)
             }
             else{
                 task_val.classList.toggle('task_finished')
                 edit_btn.classList.toggle('task_finished')
-                edit_btn.disabled=false;
+                edit_btn.disabled=true;
                 task.finished=!task.finished;
                 set_local_storage(tasks);
             }
