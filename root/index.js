@@ -22,18 +22,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         let delete_btn = element.querySelector('.delete');
         let task_check=element.querySelector('.checkbox');
         console.log(task_check);
-        if(task.finished){
-            task_val.classList.toggle('task_finished')
-            edit_btn.classList.toggle('task_finished')
-            task_check.setAttribute('checked','')
-            edit_btn.setAttribute('disabled',"")
-        }
         task_check.addEventListener('click',function(){
-            task_val.classList.toggle('task_finished')
-            edit_btn.classList.toggle('task_finished')
-            edit_btn.setAttribute('disabled',"");
-            task.finished=!task.finished;
-            set_local_storage(tasks);
+            if(task.finished){
+                task_val.classList.toggle('task_finished')
+                edit_btn.classList.toggle('task_finished')
+                task_check.setAttribute('checked','')
+                edit_btn.disabled=true;
+                set_local_storage(tasks)
+            }
+            else{
+                task_val.classList.toggle('task_finished')
+                edit_btn.classList.toggle('task_finished')
+                edit_btn.disabled=false;
+                task.finished=!task.finished;
+                set_local_storage(tasks);
+            }
 
         })
         edit_btn.addEventListener('click',()=>{
